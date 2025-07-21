@@ -18,13 +18,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'npm test' // Only if you have test scripts
+                bat 'npm test' // Only if you have test scripts
             }
         }
 
