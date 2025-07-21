@@ -34,6 +34,12 @@ pipeline {
             }
         }
 
+        stage('Check PM2') {
+            steps {
+                bat 'pm2 -v'
+            }
+        }
+
 stage('Deploy') {
     steps {
         bat 'pm2 delete app || exit 0'
