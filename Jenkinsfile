@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'NodeJS 16'  // Match the name configured in Jenkins Global Tool Config
+        nodejs'NodeJS 16'  // Match the name configured in Jenkins Global Tool Config
     }
 
     environment {
