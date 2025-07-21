@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs'NodeJS 16'  // Match the name configured in Jenkins Global Tool Config
+        nodejswg'NodeJS 16'  // Match the name configured in Jenkins Global Tool Config
     }
 
     environment {
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/saikiran-devOpss/node-js-dev.git'
+                git branch: 'main', url: 'https://github.com/saikiran-devOpss/node-js-dev.git'
             }
         }
 
