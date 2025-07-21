@@ -34,10 +34,11 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            steps {
-                echo 'Deploy step - SCP to server or restart pm2 etc.'
-            }
-        }
+stage('Deploy') {
+    steps {
+        bat 'pm2 delete app || exit 0'
+        bat 'pm2 start app.js --name app'
+    }
+}
     }
 }
