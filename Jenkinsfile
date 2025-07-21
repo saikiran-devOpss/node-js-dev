@@ -33,12 +33,12 @@ pipeline {
                 echo 'Build step for Node.js app - can be dockerize or zip'
             }
         }
-
-        stage('Check PM2') {
-            steps {
-                bat 'pm2 -v'
-            }
-        }
+stage('Check PM2') {
+    steps {
+        bat 'where pm2'
+        bat 'pm2 -v'
+    }
+}
 
 stage('Deploy') {
     steps {
